@@ -34,7 +34,7 @@ Lista * somaLista(Lista * l1, Lista * l2) {
 		t1--;
 	}
 	while(t2 > 0) {
-		remover_primeiro(l2);
+		remover_primeiro(l1);
 		t2--;
 	}
 	return l3;
@@ -124,17 +124,17 @@ int main() {
 			printf("3. Mostrar o resultado da soma.\n");
 			printf("4. Mostrar o resultado do produto.\n");
 			printf("5. Sair do programa. \n");
-			printf("\nSelecione uma opção: ");
+			printf("\nSelecione uma opÃ§Ã£o: ");
 			scanf("%d", &op);
 			fflush(stdin);
 		}
 		while(op != 0 && op != 1 && op != 2 && op != 3 && op != 4 && op != 5){
-			printf("\nOpção inválida!\n");
+			printf("\nOpÃ§Ã£o invÃ¡lida!\n");
 			scanf("%d", &op);
 			fflush(stdin);
 		}
     	while(op == 1){
-		    printf("Digite o primeiro número: ");
+		    printf("Digite o primeiro nÃºmero: ");
 		    gets(n1);
 			fflush(stdin);
 		    if(tamanho(l1) > 0){
@@ -146,7 +146,7 @@ int main() {
 		    op = 2;
 		}
 		while(op == 2) {
-		    printf("Digite o segundo número: ");
+		    printf("Digite o segundo nÃºmero: ");
 		    gets(n2);
 			fflush(stdin);
 		    if(tamanho(l2) > 0){
