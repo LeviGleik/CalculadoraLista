@@ -6,13 +6,15 @@
 #include <locale.h>
 Lista * somaLista(Lista * l1, Lista * l2) {
 	Lista * l3 = criar();
-	int i, auxD = 0, auxSoma;
+	int i, auxD = 0, auxSoma, t1 = 0, t2 = 0;
     
 	while(tamanho(l1) > tamanho(l2)){
 		inserir_primeiro(l2, 0);
+		t1++;
 	}
 	while(tamanho(l2) > tamanho(l1)){
 		inserir_primeiro(l1, 0);
+		t2++;
 	}
 	for (i = tamanho(l1) - 1; i >= 0; i--) {
 		auxSoma = ler_pos(l1, i) + ler_pos(l2, i);
@@ -26,6 +28,14 @@ Lista * somaLista(Lista * l1, Lista * l2) {
 	}
 	if(auxD == 1) {
 		inserir_primeiro(l3, 1);
+	}
+	while(t1 > 0) {
+		remover_primeiro(l2);
+		t1--;
+	}
+	while(t2 > 0) {
+		remover_primeiro(l2);
+		t2--;
 	}
 	return l3;
 }
