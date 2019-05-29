@@ -127,16 +127,19 @@ int main() {
 			printf("\nSelecione uma opção: ");
 			scanf("%d", &op);
 			fflush(stdin);
+__fpurge(stdin);
 		}
 		while(op != 0 && op != 1 && op != 2 && op != 3 && op != 4 && op != 5){
 			printf("\nOpção inválida!\n");
 			scanf("%d", &op);
 			fflush(stdin);
+__fpurge(stdin);
 		}
     	while(op == 1){
 		    printf("Digite o primeiro número: ");
 		    gets(n1);
 			fflush(stdin);
+__fpurge(stdin);
 		    if(tamanho(l1) > 0){
 			    limpar(l1);
 			}
@@ -149,6 +152,7 @@ int main() {
 		    printf("Digite o segundo número: ");
 		    gets(n2);
 			fflush(stdin);
+__fpurge(stdin);
 		    if(tamanho(l2) > 0){
 			    limpar(l2);
 			}
