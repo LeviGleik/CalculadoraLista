@@ -34,7 +34,7 @@ Lista * somaLista(Lista * l1, Lista * l2) {
 		t1--;
 	}
 	while(t2 > 0) {
-		remover_primeiro(l1);
+		remover_primeiro(l2);
 		t2--;
 	}
 	return l3;
@@ -127,19 +127,19 @@ int main() {
 			printf("\nSelecione uma opção: ");
 			scanf("%d", &op);
 			fflush(stdin);
-__fpurge(stdin);
+			fseek(stdin,0,SEEK_END);
 		}
 		while(op != 0 && op != 1 && op != 2 && op != 3 && op != 4 && op != 5){
 			printf("\nOpção inválida!\n");
 			scanf("%d", &op);
 			fflush(stdin);
-__fpurge(stdin);
+			fseek(stdin,0,SEEK_END);
 		}
     	while(op == 1){
 		    printf("Digite o primeiro número: ");
-		    gets(n1);
+		    fgets(n1, sizeof(char), stdin);
 			fflush(stdin);
-__fpurge(stdin);
+			fseek(stdin,0,SEEK_END);
 		    if(tamanho(l1) > 0){
 			    limpar(l1);
 			}
@@ -150,9 +150,9 @@ __fpurge(stdin);
 		}
 		while(op == 2) {
 		    printf("Digite o segundo número: ");
-		    gets(n2);
+		    fgets(n2, sizeof(char), stdin);
 			fflush(stdin);
-__fpurge(stdin);
+			fseek(stdin,0,SEEK_END);
 		    if(tamanho(l2) > 0){
 			    limpar(l2);
 			}
